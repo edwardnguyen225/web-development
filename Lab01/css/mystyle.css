@@ -1,0 +1,18 @@
+table {
+    border: 1px solid black;
+    padding: 1px
+  }
+
+  td {
+    border: thin solid black;
+    margin: 1px;
+  }
+
+  video {
+    width: 50%;
+    height: auto;
+  }
+
+  .sign-up div{
+      padding-top: 5px;
+  }
