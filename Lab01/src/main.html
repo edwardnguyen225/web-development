@@ -3,6 +3,17 @@
 
 <head>
   <title>Page Title</title>
+  <style>
+    table {
+      border: 1px solid black;
+      padding: 1px
+    }
+
+    td {
+      border: thin solid black;
+      margin: 1px;
+    }
+  </style>
 </head>
 
 <body>
@@ -28,22 +39,26 @@
   <h1>Our Locations</h1>
   <ul>
     <li>USA</li>
-    <ul>
-      <li> <a href="http://meetup.com/girldevelopit" target="_blank">New York</a>
-      </li>
-      <li><a href="http://www.meetup.com/girldevelopitcbus">Columbus</a></li>
-      <li><a href="http://www.meetup.com/Girl-Develop-It-Austin">Austin</a></li>
-      <li><a href="http://www.meetup.com/Girl-Develop-It-Philadelphia/">Philly</a></li>
-    </ul>
+    <li>
+      <ul>
+        <li> <a href="http://meetup.com/girldevelopit" target="_blank">New York</a>
+        </li>
+        <li><a href="http://www.meetup.com/girldevelopitcbus" target="_blank">Columbus</a></li>
+        <li><a href="http://www.meetup.com/Girl-Develop-It-Austin" target="_blank">Austin</a></li>
+        <li><a href="http://www.meetup.com/Girl-Develop-It-Philadelphia/" target="_blank">Philly</a></li>
+      </ul>
+    </li>
     <li>World</li>
-    <ul>
-      <li><a href="http://www.meetup.com/Girl-Develop-It-Ottawa">Ottawa</a></li>
-      <li><a href="http://www.meetup.com/girldevelopit-sydney">Sydney</a></li>
-    </ul>
+    <li>
+      <ul>
+        <li><a href="http://www.meetup.com/Girl-Develop-It-Ottawa">Ottawa</a></li>
+        <li><a href="http://www.meetup.com/girldevelopit-sydney">Sydney</a></li>
+      </ul>
+    </li>
   </ul>
 
   <h1>Upcoming Classes</h1>
-  <table border="1">
+  <table>
     <tr style="text-align:center">
       <td><b>Location</b></td>
       <td><b>Topic</b></td>
@@ -56,26 +71,25 @@
       <td>San Francisco</td>
       <td>HTML & CSS</td>
     </tr>
-    </tr>
   </table>
 
   <h1>Sign Up!</h1>
 
 
-  <form action="sign up">
+  <form action="sign_up">
     <div>
       <label for="name">Name:</label>
-      <input type="text" name="name">
+      <input type="text" name="name" id="name">
     </div>
-  
+
     <div>
       <label for="email">Email:</label>
-      <input type="text" name="email">
+      <input type="text" name="email" id="email">
     </div>
-  
+
     <div>
       <label for="location">Location:</label>
-      <select name="location">
+      <select name="location" id="location">
         <option value="none" selected disabled hidden>Select your state</option>
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
@@ -130,21 +144,29 @@
         <option value="WY">Wyoming</option>
       </select>
     </div>
-  
+
     <div>
-      <label for="gender">Gender:</label>
-      Female<input type="radio" name="sex" value="female">
-      Male<input type="radio" name="sex" value="male">
+      Gender:<br>
+      <label for="female">Female</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="male">Male</label>
+      <input type="radio" id="male" name="gender" value="male">
     </div>
-  
+
     <div>
       <label for="experience">Experience:</label><br>
-      <textarea name="message">  </textarea>
+      <textarea name="message" id="experience">  </textarea>
     </div>
 
     <button type="submit">Sign up</button>
   </form>
 
+  <div id="about">
+    <p><a href="http://twitter.com/girldevelopit" target="_blank">Twitter</a> |
+      <a href="http://www.facebook.com/girldevelopit" target="_blank">Facebook</a> |
+      <a href="http://www.flickr.com/photos/40453677@N00/sets/72157626841092971/" target="_blank">
+        Flickr</a>
+  </div>
 
 </body>
 
