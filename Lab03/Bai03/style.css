@@ -1,6 +1,6 @@
 body {
   background: url(images/bg-body.png) repeat-x top center #e8f7f9;
-  font-family: "Trebuchet MS" Arial, Helvetica, sans-serif;
+  font-family: "Trebuchet MS"Arial, Helvetica, sans-serif;
   font-size: 62.5%;
   color: #222222;
 }
@@ -22,6 +22,7 @@ a {
   text-decoration: none;
   color: #b4c835;
 }
+
 a:hover {
   text-decoration: none;
   color: #6cc7dc;
@@ -38,6 +39,7 @@ a:hover {
   height: 140px;
   background: url(images/bg-header.jpg) no-repeat;
 }
+
 .nav-menu {
   height: 35px;
   line-height: 35px;
@@ -48,15 +50,18 @@ a:hover {
 .nav-menu ul {
   list-style-type: none;
 }
+
 .nav-menu li {
   float: left;
 }
+
 .nav-menu li a {
   padding: 0 15px;
   display: block;
   color: #ffffff;
   margin-right: 2px;
 }
+
 .nav-menu li a:hover {
   background: url(images/bg-menu-hover.png) no-repeat center center;
 }
@@ -64,12 +69,14 @@ a:hover {
 .content-container {
   display: flex;
 }
+
 .sidebar {
   width: 180px;
   background: #efefef;
   margin-right: 10px;
   height: 150px;
 }
+
 .feed {
   height: 25px;
   width: 126px;
@@ -77,6 +84,7 @@ a:hover {
   margin: 0 auto;
   padding-left: 26px;
 }
+
 a.feed-button {
   cursor: pointer;
   display: block;
@@ -85,6 +93,7 @@ a.feed-button {
   background: url("images/button-feed.png") 0 0 no-repeat;
   text-decoration: none;
 }
+
 a:hover.feed-button {
   background-position: 0 -25px;
 }
@@ -94,6 +103,7 @@ a:hover.feed-button {
   list-style-type: none;
   margin-top: 10px;
 }
+
 .sidebar li a {
   display: block;
   height: 20px;
@@ -102,10 +112,12 @@ a:hover.feed-button {
   padding-left: 5px;
   border-bottom: 1px solid #dddddd;
 }
+
 .sidebar li a:hover {
   background: #edebed;
   color: #6cc4d8;
 }
+
 .sidebar-bottom {
   height: 20px;
   background: url(images/bg-sidebar-bottom.gif) no-repeat top center;
@@ -123,6 +135,7 @@ a:hover.feed-button {
   background: url(images/bg-ad-top.png) no-repeat;
   padding: 5px;
 }
+
 .content {
   text-align: justify;
   line-height: 20px;
@@ -130,6 +143,7 @@ a:hover.feed-button {
   width: 500px;
   min-height: 400px;
 }
+
 .content-title {
   font-size: 30px;
   font-weight: normal;
@@ -141,15 +155,18 @@ a:hover.feed-button {
   cursor: default;
   letter-spacing: 1px;
 }
+
 .comments {
   margin-top: 10px;
 }
+
 .comments a {
   color: #6cc7dc;
   background: url(images/icon-comment.png) no-repeat 0px 2px;
   padding-left: 20px;
   padding-right: 2px;
 }
+
 .comments a:hover {
   color: #b4c835;
 }
