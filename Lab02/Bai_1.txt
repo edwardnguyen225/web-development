@@ -1,0 +1,44 @@
+Bài 1. Có bao nhiêu cách để nhúng mã CSS vào tài liệu HTML, liệt kê và cho ví dụ mỗi trường
+hợp.
+
+Trả lời:
+Có 3 cách để nhứng mã CSS vào tài liệu HTML.
+-----------------------
+1. Inline - Mã CSS viết tại thuộc tính style của phần tử HTML
+
+Đặt mã CSS vào thẳng thuộc tính style của phần tử. Mã CSS chỉ tác động nên chính phần tử đó.
+VD:
+    <p style="color:white; background-color:red;">
+        Lorem ipsum
+    </p>
+
+-----------------------
+2. Internal Styles – Nhúng trực tiếp vào tài liệu HTML thông qua cặp thẻ <style> </style>.
+
+Khai báo cặp thẻ <style> vào vị trí bất kỳ của website, có thể viết CSS vào trong cặp thẻ <style>.
+VD:
+    <style type="text/css">
+       p {
+        color: blue;
+        font-family: Arial;
+       }
+    </style>
+
+-----------------------
+3. External Styles – Tạo một tập tin .css riêng và nhúng vào tài liệu HTML thông qua cặp thẻ <link>.
+
+Tạo ra tập tin css bất kỳ, chèn vào tập tin HTML bằng thẻ <link> bên trong cặp thẻ <head>
+VD:
+File style.css có nội dung như sau:
+
+       p {
+        color: blue;
+        font-family: Arial;
+       }
+
+Và trong file index.html có chèn cặp thẻ <link> bên trong <head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab 02 - Bai 2</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
