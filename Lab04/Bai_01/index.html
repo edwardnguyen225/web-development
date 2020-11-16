@@ -1,119 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bai 1</title>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
+    <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
+    <title>Bai 1</title>
   </head>
-
   <body>
-    <div class="container-fluid header box-border">
-      <div class="row">
-        <div
-          class="col-sm-3 col-lg-2 site_title"
-          style="padding-bottom: 0.5rem"
-        >
-          Site title
+    <div class="container-fluid">
+      <div class="row box-border">
+        <div class="header_title col-sm-2">
+          <h2>Site Title</h2>
         </div>
-        <div
-          class="col-sm-6 col-lg-7"
-          style="padding: 0.5rem; padding-left: 0rem"
-        >
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Categories</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Follow Us</a>
-            </li>
+        <div class="header_menu col-sm-7">
+          <ul class="d-flex h-100">
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Follow us</a></li>
           </ul>
         </div>
-        <div class="col-sm-3" style="padding: 0.5rem">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="Search"
-            aria-label="Search"
-          />
+        <div class="header_search col-sm-3" style="margin: auto 0">
+          <input type="search" class="search_bar" placeholder="Search" />
+        </div>
+      </div>
+      <div class="row body_container">
+        <div class="col-sm-2 container-left">
+          <div class="sidebar">
+            <div class="sidebar_category box-border">
+              <h3 class="text-center box-border">Category</h3>
+              <ul>
+                <li><a href="#">Item 1...</a></li>
+                <li><a href="#">Item 2...</a></li>
+                <li><a href="#">Item 3...</a></li>
+                <li><a href="#">Item 4...</a></li>
+                <li><a href="#">Item 5...</a></li>
+              </ul>
+            </div>
+            <div class="sidebar_products box-border">
+              <h3 class="text-center box-border">Top Products</h3>
+              <ul>
+                <li><a href="#">Item 1...</a></li>
+                <li><a href="#">Item 2...</a></li>
+                <li><a href="#">Item 3...</a></li>
+                <li><a href="#">Item 4...</a></li>
+                <li><a href="#">Item 5...</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8 main">
+          <div class="main_title">
+            <h3>Top Products</h3>
+          </div>
+          <div class="main_products">
+            <div class="row">
+              <div class="col-sm">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./img/ExampleProductImage.jpg"
+                    alt="Product's image"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Price 10$.</p>
+                    <div class="text-center">
+                      <a href="#" class="btn btn-primary">Buy now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./img/ExampleProductImage.jpg"
+                    alt="Product's image"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Price 10$.</p>
+                    <div class="text-center">
+                      <a href="#" class="btn btn-primary">Buy now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./img/ExampleProductImage.jpg"
+                    alt="Product's image"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Price 10$.</p>
+                    <div class="text-center">
+                      <a href="#" class="btn btn-primary">Buy now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="padding-top: 30px">
+              <div class="col-sm">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./img/ExampleProductImage.jpg"
+                    alt="Product's image"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Price 10$.</p>
+                    <div class="text-center">
+                      <a href="#" class="btn btn-primary">Buy now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./img/ExampleProductImage.jpg"
+                    alt="Product's image"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Price 10$.</p>
+                    <div class="text-center">
+                      <a href="#" class="btn btn-primary">Buy now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./img/ExampleProductImage.jpg"
+                    alt="Product's image"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-center">Price 10$.</p>
+                    <div class="text-center">
+                      <a href="#" class="btn btn-primary">Buy now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main_pagination navigation_bar">
+            <ul class="pagination justify-content-end">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-2 container-right box-border">
+          <div class="text-center">160 x 600</div>
         </div>
       </div>
     </div>
-
-    <div class="row">
-      <div class="column left box-border nav-column">
-        <div class="box-border">
-          <h5 class="nav-header box-border">Category</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Item 1...</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Item 2...</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Item 3...</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Item 4...</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Item 5...</a>
-            </li>
-          </ul>
-        </div>
-        <div class="box-border">
-          <h5 class="nav-header box-border">Top products</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Item 1...</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Item 2...</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Item 3...</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Item 4...</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Item 5...</a>
-            </li>
-          </ul>
-        </div>
+    <footer class="page-footer font-small blue box-border">
+      <div class="text-center">Footer information...</div>
+      <!-- Copyright -->
+      <!-- <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+      </div> -->
+      <!-- Copyright -->
+      <div class="container">
+        <ul class="list-inline text-center">
+          <li class="list-inline-item"><a href="#">Link 1</a></li>
+          <li class="list-inline-item"><a href="#">Link 2</a></li>
+          <li class="list-inline-item"><a href="#">Link 3</a></li>
+        </ul>
       </div>
-      <div class="column middle box-border" style="background-color: #bbb">
-        Column2
-      </div>
-      <div class="box-border right-container column right">
-        <div class="ad-banner__right box-border" style="padding: 1rem">
-          160 x 600
-        </div>
-      </div>
-    </div>
-    <footer class="footer box-border">
-      Footer information...
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 3</a>
-        </li>
-      </ul>
     </footer>
+    <!-- Footer -->
   </body>
 </html>

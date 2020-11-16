@@ -1,93 +1,111 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.header {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  text-align: center;
-}
-
-.header .site_title {
-  text-align: left;
+nav .navbar-brand {
   font-size: 2rem;
-  font-weight: bold;
 }
 
-/* Create three unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Left and right column */
-.column.left {
-  width: 25%;
-}
-
-/* Middle column */
-.column.middle {
-  width: 50%;
-}
-
-.column.right {
-  width: 160px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.footer {
-  background-color: #f1f1f1;
-  text-align: center;
-  padding: 10px;
+nav nav-link {
+  text-decoration-color: none;
 }
 
 .box-border {
   border: 1px solid black;
 }
 
-.nav-link {
-  padding: 0.5rem 0.2rem;
+.header_menu {
+  padding-left: 0;
 }
 
-.nav-column {
-  padding: 0rem;
+.header_menu ul {
+  list-style-type: none;
+  /* margin: 0; */
+  overflow: hidden;
+  padding-left: 0;
 }
 
-.nav-column .nav-header {
-  background-color: #EBEBEB;
-  padding: 0.5rem;
+.header_menu li {
+  float: left;
+  /* padding-left: 10px; */
+  margin: auto 0;
+}
+
+.header_menu li a {
+  display: block;
   text-align: center;
+  padding-right: 1rem;
 }
 
-.nav-column .nav-link {
-  padding-left: 1rem;
+.header_search {
+  margin: auto 0;
+}
+
+.header_search .search_bar {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.body_container {
+  border: 1px solid black;
+  padding: 0;
+}
+
+.body_container .container-left {
+  border: 1px solid black;
+  padding: 0px;
+}
+
+.body_container .container-left .sidebar h3 {
+  background-color: #EBEBEB;
+}
+
+.body_container .container-left .sidebar ul {
+  list-style-type: none;
+  padding: 0rem 1rem;
+}
+
+.body_container .container-left .sidebar li {
+  text-align: left;
+}
+
+.body_container .container-left .sidebar a {
   color: black;
 }
 
-.right-container {
-  padding: 0rem;
-  width: 160px;
+.body_container .main .main_products .card {
+  border: 1px solid black;
 }
 
-.ad-banner__right {
-  width: 160px;
-  height: 600px;
+.body_container .main .main_products .card img {
+  padding: 1rem;
+  width: 100%;
+  height: auto;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  .column.side, .column.middle {
-    width: 100%;
-  }
+.body_container .main .main_products .card .card-body .btn {
+  background-color: #E9E9E9;
+  color: black;
+  border-color: black;
+  padding: 0.1rem 0.5rem;
 }
+
+
+
+.body_container .main .navigation_bar {
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.body_container .main .navigation_bar .page-link {
+  color: black;
+}
+
+.body_container .container-right {
+  min-height: 600;
+  min-width: 160;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+/* footer li {
+  padding: 0.2rem 0.5rem;
+} */
