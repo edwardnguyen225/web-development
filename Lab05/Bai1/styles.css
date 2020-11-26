@@ -1,0 +1,82 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: "Open Sans", sans-serif;
+}
+
+.container {
+   width: 1000px;
+   height: 550px;
+   margin: 20px auto;
+}
+
+.calculator {
+   width: 23rem;
+   margin: 0 auto;
+   top: 20px;
+   position: relative;
+   padding: 1rem;
+   border-radius: 5px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#result {
+   width: 21.1rem;
+   margin: 0.2rem;
+   height: 5rem;
+   border: 1px solid #d6d6d6;
+}
+
+.textview {
+   text-align: right;
+   width: 20.9rem;
+   margin-right: 1rem;
+   margin: 0.2rem;
+   font-size: 1.5rem;
+   padding: 0.2rem 0rem;
+}
+
+#history {
+   text-align: right;
+   height: 1rem;
+   margin: 0 20px;
+   padding-top: 1rem;
+   font-size: 15px;
+   color: #919191;
+}
+
+#output {
+   text-align: right;
+   height: 3.5rem;
+   margin: 10px 20px;
+   font-size: 30px;
+}
+
+.btn {
+   width: 5rem;
+   height: 3rem;
+   font-size: 1.5rem;
+   margin: 0.1rem;
+   cursor: pointer;
+   border: none;
+}
+
+.btn-zero {
+   width: 10.5rem !important;
+}
+
+.btn:hover {
+   background-color: #d6d6d6;
+}
+
+.btn:active {
+   background-color: #c9c7c4;
+}
+
+.btn:active,
+.btn:focus {
+   outline: none;
+}
