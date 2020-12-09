@@ -1,0 +1,30 @@
+div {
+   margin: 0.5rem 0;
+}
+
+a {
+   text-decoration: none;
+}
+
+.btn {
+   color: white;
+   background-color: dodgerblue;
+   padding: 0.5rem;
+   margin: 0.5rem 0;
+   border: none;
+   border-radius: 5px;
+}
+
+.btn:hover {
+   cursor: pointer;
+   background-color: rgb(13, 112, 211);
+}
+
+.btn-danger {
+   color: white;
+   background-color: orangered;
+}
+
+.btn-danger:hover {
+   background-color: rgb(189, 50, 0);
+}
