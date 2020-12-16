@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./assets/css/styles.css">
-   <title>Bai tap PHP MySQL</title>
-</head>
-
-<body>
-   <h1>Lab 07 - PHP MySQL</h1>
-
+<?php
+include('header.php');
+?>
    <h2>List of all records in table <em>cars</em></h2>
 
    <div>
-      <a href="./add_new_car.php" class="btn">Add new car</a>
+      <a href="./add_new_car.php" class="btn btn-success">Add new car</a>
    </div>
 
 
@@ -30,13 +20,12 @@
    if ($response) {
 
       echo "<div>";
-      echo '<table align="left"
-      cellspacing="5" cellpadding="8">
+      echo '<table class="carlist">
 
       <tr><td align="center"><b>ID</b></td>
       <td align="center"><b>Name</b></td>
       <td align="center"><b>Year</b></td>
-      <td colspan="2" align="center"><b>Action</b></td></tr>';
+      <td align="center"><b>Action</b></td></tr>';
 
       while ($row = mysqli_fetch_array($response)) {
 
@@ -44,8 +33,12 @@
          echo '<td align="center">' . $row['id'] . '</td>
                <td align="center">' . $row['name'] . '</td>
                <td align="center">' . $row['year'] . '</td>
-               <td align="center"><a href="update_car.php?id=' . $row['id'] . '" class="btn">Update</a></td>
-               <td align="center"><a href="delete_car.php?id=' . $row['id'] . '" class="btn btn-danger">Delete</a></td>';
+               <td align="center">
+                  <div>
+                     <a href="update_car.php?id=' . $row['id'] . '" class="btn">Update</a>
+                     <a href="delete_car.php?id=' . $row['id'] . '" class="btn btn-danger">Delete</a>
+                  </div>
+               </td>';
          echo '</tr>';
       }
 

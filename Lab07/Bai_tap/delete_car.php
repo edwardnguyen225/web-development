@@ -1,4 +1,8 @@
 <?php
+include('header.php');
+?>
+
+<?php
 if (isset($_POST['id']) && !empty($_POST['id'])) {
    require_once "./mysql_connect.php";
    $id = $_POST['id'];
@@ -15,19 +19,6 @@ if (isset($_POST['id']) && !empty($_POST['id'])) {
    }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./assets/css/styles.css">
-   <title>Delete car from table</title>
-</head>
-
-<body>
-   <h1>Lab 07 - PHP MySQL</h1>
 
    <div>
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

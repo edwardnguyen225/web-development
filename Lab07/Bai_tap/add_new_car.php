@@ -1,4 +1,8 @@
 <?php
+include('header.php');
+?>
+
+<?php
 require_once("./mysql_connect.php");
 $id = $_GET['next_id'];
 $year = 0;
@@ -50,19 +54,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./assets/css/styles.css">
-   <title>Add new car</title>
-</head>
-
-<body>
-   <h1>Lab 07 - PHP MySQL</h1>
-
    <div>
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
          <h2>Add new record to table <em>cars</em></h2>
@@ -78,8 +69,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="number" name="year" min="1990" max="2015" required>
          </div>
          <div>
-            <input type="submit" class="btn btn-primary">
-            <a href="./index.php" class="btn btn-secondary">Cancel</a>
+            <input type="submit" class="btn btn-primary btn-success" value="Add">
+            <a href="./index.php" class="btn btn-noDecor">Cancel</a>
          </div>
          <p><?php echo $err_msg ?></p>
       </form>
