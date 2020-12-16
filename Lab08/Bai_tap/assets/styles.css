@@ -1,0 +1,27 @@
+header {
+   text-align: center;
+   margin-top: 1rem;
+}
+
+td {
+   padding: 0.3rem;
+}
+
+.error_msg {
+   color: red;
+}
+
+.btn {
+   min-width: 5rem;
+   padding: .375rem .75rem;
+   border-radius: 5px;
+}
+
+.btn + .btn {
+   margin-left: 1rem;
+}
+
+.btn-noDecor {
+   color: black;
+   background-color: transparent;
+}

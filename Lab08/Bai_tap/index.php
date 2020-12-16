@@ -1,69 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include('./header.php');
+?>
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./assets/css/styles.css">
-   <title>Lab 08</title>
-</head>
+<div class="container col-sm-10 py-4">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    <h2>Car Management</h2>
+                </div>
+                <div class="col text-right">
+                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#create-item">
+                        Add Car
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-bordered" id="car_table">
+                <thead>
+                    <tr>
+                        <th>Car ID</th>
+                        <th>Name</th>
+                        <th>Year</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-<body>
-   <h1>Lab 08 - AJAX JQUERY</h1>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
-   <h2>List of all records in table <em>cars</em></h2>
+<!-- Modal create item -->
+<div class="modal fade" id="create-item" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <form data-toggle="validator" method="POST">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal_title">Add Car</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="col-md-3 text-right">Car ID <span class="text-danger">*</span></label>
+                            <div class="col-md-9">
+                                <input type="number" name="id" id="id" class="form-control" required />
+                                <div class="help-block with-errors err-id error_msg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="col-md-3 text-right">Name <span class="text-danger">*</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="name" id="name" class="form-control" required minlength="5" maxlength="40" />
+                                <div class="help-block with-errors err-name error_msg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="col-md-3 text-right">Year <span class="text-danger">*</span></label>
+                            <div class="col-md-9">
+                                <input type="number" name="year" id="year" class="form-control" required min="1990" max="2015" />
+                                <div class="help-block with-errors err-year error_msg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn create-submit btn-success">Add</button>
+                    <button type="button" class="btn btn-noDecor" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
-   <div>
-      <a href="./add_new_car.php" class="btn">Add new car</a>
-   </div>
+<!-- Modal edit item -->
+<div class="modal fade" id="edit-item" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <form data-toggle="validator" method="POST">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal_title">Add Car</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="col-md-3 text-right">Car ID <span class="text-danger">*</span></label>
+                            <div class="col-md-9">
+                                <input type="number" name="id" id="id" class="form-control" required disabled/>
+                                <div class="help-block with-errors err-id error_msg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="col-md-3 text-right">Name <span class="text-danger">*</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="name" id="name" class="form-control" required minlength="5" maxlength="40" />
+                                <div class="help-block with-errors err-name error_msg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="col-md-3 text-right">Year <span class="text-danger">*</span></label>
+                            <div class="col-md-9">
+                                <input type="number" name="year" id="year" class="form-control" required min="1990" max="2015" />
+                                <div class="help-block with-errors err-year error_msg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn edit-submit btn-success">Add</button>
+                    <button type="button" class="btn btn-noDecor" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
+</div>
 
-   <?php
-   require_once("./mysql_connect.php");
-   $dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
-      or die('Could not connect to MySQL: ' .
-         mysqli_connect_error());
-
-   $query = "SELECT id, name, year FROM cars";
-   $response = @mysqli_query($dbc, $query);
-
-   if ($response) {
-
-      echo "<div>";
-      echo '<table align="left"
-      cellspacing="5" cellpadding="8">
-
-      <tr><td align="center"><b>ID</b></td>
-      <td align="center"><b>Name</b></td>
-      <td align="center"><b>Year</b></td>
-      <td align="center"><b>Action</b></td></tr>';
-
-      while ($row = mysqli_fetch_array($response)) {
-
-         echo '<tr>';
-         echo '<td align="center">' . $row['id'] . '</td>
-               <td align="center">' . $row['name'] . '</td>
-               <td align="center">' . $row['year'] . '</td>
-               <td align="center">
-                  <div>
-                     <a href="update_car.php?id=' . $row['id'] . '" class="btn">Update</a>
-                     <a href="delete_car.php?id=' . $row['id'] . '" class="btn btn-danger">Delete</a>
-                  </div>
-               </td>';
-         echo '</tr>';
-      }
-
-      echo '</table>';
-      echo '</div>';
-   } else {
-
-      echo "Couldn't issue database query<br />";
-
-      echo mysqli_error($dbc);
-   }
-
-   mysqli_close($dbc);
-   ?>
 </body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 
 </html>
