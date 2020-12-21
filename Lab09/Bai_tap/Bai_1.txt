@@ -1,0 +1,44 @@
+Bài 1. Nêu các ưu điểm, nhược điểm của Cookie và Session, các ví dụ có sử dụng
+Cookie và Session trong ứng dụng Web thực tế.
+Trả lời:
+a) Về Cookie.
+
+Ưu điểm:
+- Cookie dễ sử dụng và hiện thực.
+- Tốn ít chi phí lưu trữ, và chi phí thực thi, có thể lưu trữ ở phía máy
+người dùng, từ đó, giảm tải cho server.
+- Có thể kiểm soát thời gian tồn tại của cookie qua session (session cookies),
+hoặc lưu trữ cookie lâu dài ở máy người dùng (persistent cookies).
+- Cookie có thể tồn tại lâu hơn session.
+
+Nhược điểm:
+- Không đảm bảo an toàn thông tin.
+- Giới hạn về kích thước và số lượng của các tệp được lưu.
+- Người dùng có thể tắt chức năng cookies một cách có chủ ý.
+- Người dùng có thể tự xóa các coockies.
+- Trình duyệt có thể từ chối cookies.
+- Không thể lưu trữ các tệp phức tạp.
+
+Ví dụ thực tế:
+- Các trang web lưu cookies lại để giúp người dùng không cần đăng nhập thủ công
+trong lần truy cập sau.
+- Các chủ website có thể kiểm tra, quan sát được hành vi người dùng để có kế hoạch
+phù hợp hơn.
+- Khi có cookies, người dùng không cần mất nhiều thời gian để nhập liệu những
+thông tin mình đã nhập trước đó, vì trình duyệt, website sẽ gợi ý dựa trên cookies.
+
+b) Về Session.
+Ưu điểm:
+- Dễ sử dụng và hiện thực.
+- Lưu trữ dữ liệu người dùng một cách riêng biệt.
+- Mang tính bảo mật an toàn thông tin.
+
+Nhược điểm:
+- Quá tải hệ thống khi một lượng lớn dữ liệu người dùng được sử lý.
+
+Ví dụ thực tế:
+- Khi người dùng đăng nhập thì server sẽ tạo ra một session tương ứng với vai trò
+của người dùng đó.
+- Hay người dùng sử dụng một trình duyệt, để thao tác (như cho đồ vào giỏ hàng, hay
+nhận xét sản phẩm lưu dưới dạng nháp). Sau đó, người dùng mở trình duyệt khác để
+đăng nhập thì tiếp tục hiển thị lại bản nháp trước đó cho người dùng.

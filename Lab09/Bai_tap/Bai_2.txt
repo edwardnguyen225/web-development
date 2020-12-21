@@ -1,0 +1,16 @@
+Bài 2. Hiện thực các tính năng cho phép quản lý cookie của website
+(hiển thị danh sách cookie hiện tại, thêm sửa, xoá thông tin cookie).
+
+Trả lời:
+- Hiển thị danh sách cookie hiện tại:
+> document.cookie;
+
+- Thêm Cookie:
+> document.cookie = "name=Nhan Nguyen";
+
+- Sửa Cookie:
+> document.cookie = "name=Nhan Nguyen";
+> document.cookie = "name=Nhan Tri Nguyen";
+
+- Xóa Cookie:
+> document.cookie = "name=";
